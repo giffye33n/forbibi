@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เล่นกับอ้วนน</title>
+  <!-- ฟอนต์น่ารักจาก Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page1">
+  <div class="container">
+    <h1 id="textChange">จ๊ะเอ๋! อ้วนทำยัยอะ˖ ᡣ𐭩 ⊹ ࣪  ౨ৎ˚₊</h1>
+
+    <!-- คำแนะนำการเปิดเพลง -->
+    <p class="music-guide" style="font-size: 16px; color: #555; font-family: 'Itim', sans-serif;">
+      เปิดเพลงนี้ตอนทำนะ! 🎶
+      เข้าใจมั้ย !  <a href="javascript:void(0);" onclick="openMusicPlayer()">จิ้มเยย</a>
+    </p>
+
+    <div class="character">
+      <img id="characterImage" src="ec2e121644c54579158b21cf54bc9b88.gif" alt="ตัวการ์ตูน">
+    </div>
+
+    <div class="options">
+      <!-- ปุ่มที่ใช้ JavaScript -->
+      <button onclick="window.location.href='page2.html'">อาบน้ำอะยัง</button>
+      <button onclick="window.location.href='page3.html'">หม่ำๆข้าวยังคะ</button>
+      <button onclick="window.location.href='page4.html'">จะทำยัยต่อ</button>
+      <button onclick="window.location.href='page5.html'">ห้ามกดนะ !</button>
+    </div>
+  </div>
+
+  <script>
+    // ฟังก์ชันสำหรับเปิดเพลงในหน้าต่างใหม่
+    function openMusicPlayer() {
+      // ป๊อปอัพคำแนะนำ
+      alert("🎶 ดีมาก เชื่อฟังดีมาก!");
+
+      // เปิดเพลงในหน้าต่างใหม่
+      window.open("https://youtu.be/gFL1A1SlKhU?si=C9i9QklJAXqKwewv", "_blank"); // เปลี่ยนลิงก์ให้เป็นลิงก์ของเพลงที่คุณต้องการ
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ทำยัยดีน้า</title>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="playground">
+  <div class="container">
+    <h1 id="textChange">เบบี๋อยากทำยัยมั้ยคะ(* ´ ﹃｀*)</h1>
+
+<p style="color: #e93fa8;">ทำอะยัยดี เล่นเกม หรือ ดูหนัง หรือออออ💖</p>
+
+    <!-- ช่องกรอกข้อความ -->
+    <textarea id="userAnswer" rows="4" cols="50" placeholder="พิมพ์ไม่ดีโดนตีนะ"></textarea>
+    <br>
+    
+    <button onclick="showUserAnswer()">คำตอบไปสู่นรก(   ͡º ꒳ ͡º)</button>
+    
+    <div id="responseMessage" style="display: none;">
+      <h2>หึ้ย โม้มาก  :</h2>
+      <p id="displayAnswer"></p>
+    </div>
+  </div>
+
+  <script>
+    function showUserAnswer() {
+      var answer = document.getElementById("userAnswer").value; // รับค่าคำตอบจาก textarea
+      if (answer) {
+        document.getElementById("displayAnswer").textContent = answer; // แสดงคำตอบ
+        document.getElementById("responseMessage").style.display = "block"; // แสดงกล่องข้อความคำตอบ
+      } else {
+        alert("กรุณาพิมพ์คำตอบก่อนส่งนะคะ!");
+      }
+    }
+  </script>
+</body>
+</html>
