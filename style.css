@@ -1,0 +1,176 @@
+/* พื้นหลังของหน้าเว็บ */
+body {
+  font-family: 'Itim', cursive;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* ป้องกันไม่ให้ลายฟุ้งฟิ้งหลุดออกจากหน้าจอ */
+  position: relative;
+}
+
+/* ลายฟุ้งฟิ้ง */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('3b4d443a93d7a983c4c4a9c7233bf7b5.gif'); /* ลายแถบบางๆ */
+  opacity: 0.2;
+  z-index: 1;
+}
+
+/* กล่องข้อความที่มีกรอบตกแต่ง */
+.container {
+  text-align: center;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.5); /* เงาชมพูอ่อน */
+  position: relative;
+  z-index: 2; /* ทำให้ข้อความอยู่ด้านหน้า */
+  border: 10px solid #ffb6c1; /* กรอบชมพู */
+  background-image: url('39ed7f48269fc4de84a43825868d06ce.gif'); /* เปลี่ยน URL เป็นรูปภาพที่ต้องการ */
+  background-size: cover; /* ปรับให้รูปภาพเต็มขอบกรอบ */
+  background-position: center; /* ทำให้ภาพอยู่ตรงกลาง */
+  background-blend-mode: multiply;
+  display: inline-block;
+  animation: pulse 3s ease-in-out infinite alternate; /* เพิ่มการเต้นของกรอบ */
+}
+
+/* สไตล์ข้อความที่มีกรอบตกแต่ง */
+#textChange {
+  font-size: 26px;
+  color: #d63384; /* ชมพูหวาน */
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 182, 193, 0.6); /* พื้นหลังข้อความ */
+  animation: fadeIn 2s ease-in-out; /* ทำให้ข้อความค่อยๆ ปรากฏ */
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.7); /* เงารอบข้อความ */
+  position: relative; /* ให้ข้อความอยู่ในตำแหน่งที่กำหนด */
+  z-index: 3; /* ทำให้ข้อความอยู่ด้านบน */
+}
+
+/* กรอบตัวการ์ตูน Hello Kitty */
+.character {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* เว้นที่ด้านบน */
+}
+
+.character img {
+  width: 120px; /* ขนาดตัวการ์ตูนเล็กลง */
+  height: 120px; /* ขนาดตัวการ์ตูนเล็กลง */
+  transition: transform 0.5s;
+  border-radius: 50%;
+  border: 4px solid #ffc8dd;
+  background-color: #fff;
+  animation: floatUp 3s ease-in-out infinite alternate; /* ทำให้ตัวการ์ตูนลอยขึ้นลง */
+}
+
+/* ทำให้ปุ่มมีฟอนต์น่ารัก */
+.options button {
+  background-color: #ffb6c1; /* ชมพูอ่อน */
+  color: #fff;
+  padding: 10px 20px;
+  margin: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+  font-family: 'Itim', cursive; /* เพิ่มฟอนต์น่ารัก */
+  animation: buttonGlow 1.5s infinite alternate; /* เอฟเฟกต์ปุ่มเป็นแสงน่ารยิบระยับ */
+}
+
+/* เอฟเฟกต์ให้ปุ่มมีแสงระยิบระยับ */
+.options button:hover {
+  background-color: #ff91af;
+}
+
+/* แอนิเมชันข้อความที่ค่อยๆ ปรากฏ */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* แอนิเมชันตัวการ์ตูนลอยขึ้นลง */
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* เอฟเฟกต์ปุ่มให้เป็นแสงระยิบระยับ */
+@keyframes buttonGlow {
+  0% { box-shadow: 0 0 5px #ffb6c1; }
+  100% { box-shadow: 0 0 20px #ffb6c1, 0 0 30px #ff6f61; }
+}
+
+/* แอนิเมชันการเต้นของกรอบ */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.page5 {
+  background-color: #fff0f5; /* ชมพูอ่อนน่ารัก */
+  font-family: 'Itim', cursive;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page5 .container {
+  background-color: #ffe0f0;
+  border: 5px dashed #ff90b3;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 0 25px #ffb6c1;
+  position: relative;
+}
+
+.page5 h1 {
+  font-size: 26px;
+  color: #e75480;
+}
+
+.page5 p {
+  color: #a64d79;
+  margin-bottom: 20px;
+}
+
+.page5 .options button {
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page5 .options button:hover {
+  background-color: #ff82a9;
+}
+
+.page5 .character img {
+  width: 150px;
+  margin-top: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
